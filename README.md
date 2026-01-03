@@ -30,9 +30,8 @@ An automation + agentic decision tool that generates **unlimited business leads*
 
 ## 📸 Demo
 
-- 🎥 Demo Video: <PASTE_YOUR_VIDEO_LINK_HERE>
-- 🔗 LinkedIn Post: <PASTE_YOUR_LINKEDIN_POST_LINK_HERE>
-
+- 🎥 Demo Video: https://www.linkedin.com/posts/abhishek-dey-19aa47360_python-selenium-beautifulsoup-activity-7412924956855939075-oJwd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFna7EYBK-I4jdr0HBgJx-_wACOGoQCvNHo
+- 🔗 LinkedIn Post: https://www.linkedin.com/posts/abhishek-dey-19aa47360_python-selenium-beautifulsoup-activity-7412924956855939075-oJwd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFna7EYBK-I4jdr0HBgJx-_wACOGoQCvNHo
 ---
 
 ## 🚀 Getting Started
