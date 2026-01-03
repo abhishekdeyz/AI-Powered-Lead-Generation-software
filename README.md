@@ -1,45 +1,145 @@
-# Scraping Prototype
+Unlimited Lead Finder 🚀
+AI‑powered automation tool to generate unlimited business leads from public directories using a simple query and page range, and export them as a clean, de‑duplicated CSV ready for outreach.
+​
 
-This project is a web scraping prototype designed to collect and process data from various sources. It includes Python scripts for scraping, data processing, and analysis.
+🔍 Problem
+At Pixel Global, the team had to use multiple paid tools and manual processes to generate leads.
+This led to:
 
-## Project Structure
+High recurring subscription costs
 
-- **collect.py**: Main script for collecting data.
-- **main.py**: Entry point for the application.
-- **scond.py**: Additional script for processing or analysis.
-- **data/**: Contains HTML files and other data resources.
-- **data.csv, data2.csv, data3.csv**: Sample CSV files for storing processed data.
+Time‑consuming data collection
 
-## Features
+Duplicate and noisy leads that required manual cleanup
+​
 
-- Web scraping using Python.
-- Data storage in CSV format.
-- Modular structure for easy extension.
+✅ Solution
+This project is an automated lead generation engine that:
 
-## Prerequisites
+Takes a query (e.g. "dentist", "clinic") and page range
 
-- Python 3.8 or higher
-- Required Python libraries (install using `pip install -r requirements.txt` if applicable)
+Scrapes public business listings from a target directory
 
-## Usage
+Cleans and removes duplicate entries using Pandas
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd scraping_prototype
-   ```
-3. Run the main script:
-   ```bash
-   python main.py
-   ```
+Applies smart filtering rules to keep only relevant leads
 
-## License
+Exports everything into a structured CSV file for sales/marketing teams
+​
+​
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+✨ Features
+🔎 Query‑based search (keyword driven)
 
----
+📄 Multi‑page scraping with configurable page range
 
-*Happy scraping!*
+🧹 Data cleaning & de‑duplication (Pandas)
+
+🎯 Smart filtering logic for higher‑quality leads
+
+📁 One‑click CSV export
+
+⚙️ Fully scriptable & automatable (can be run on a schedule / as a backend job)
+​
+​
+
+🧰 Tech Stack
+Language: Python
+
+Scraping & Automation: Selenium, BeautifulSoup, Requests
+
+Data Processing: Pandas (cleaning, deduplication), CSV
+
+Others: Time, logging, environment variables (for config)
+​
+​
+
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+2️⃣ Create & Activate Virtual Environment
+bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux / macOS
+source venv/bin/activate
+3️⃣ Install Dependencies
+bash
+pip install -r requirements.txt
+If you don’t have requirements.txt yet, a sample could be:
+
+text
+selenium
+beautifulsoup4
+pandas
+requests
+python-dotenv
+⚙️ Configuration
+Most options can be set via command‑line arguments or inside a config section in main.py (you can adjust this to match your code).
+​
+
+Typical parameters:
+
+query → business category/keyword (e.g. "dentist")
+
+start_page, end_page → page range to scrape
+
+output_file → CSV path (default: leads.csv)
+
+Example (if you’re using argparse):
+
+python main.py --query "dentist" --start-page 1 --end-page 10 --output leads_dentists.csv
+🧠 How It Works (High Level)
+Builds target URLs based on query + page range
+
+Uses Selenium to load each page and handle dynamic content
+
+Parses the HTML with BeautifulSoup and extracts relevant fields
+
+Name
+
+Address
+
+Phone
+
+Website / Email (if available)
+
+Loads all records into a Pandas DataFrame
+
+Applies deduplication logic (e.g. by name + phone + address)
+
+Applies basic filtering rules (e.g. drop empty rows, invalid entries)
+
+Saves the final clean dataset as a CSV file
+​
+​
+
+📊 Example Usage
+bash
+python main.py --query "clinic" --start-page 1 --end-page 5 --output uae_clinics.csv
+Example output columns:
+
+name
+
+category
+
+address
+
+city
+
+phone
+
+website
+
+source_url
+
+🎥 Demo
+You can attach your LinkedIn / YouTube demo link here:
+
+Demo Video: [Watch here](<https://www.linkedin.com/posts/abhishek-dey-19aa47360_python-selenium-beautifulsoup-activity-7412924956855939075-oJwd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFna7EYBK-I4jdr0HBgJx-_wACOGoQCvNHo>)
+
+LinkedIn Post:(<https://www.linkedin.com/posts/abhishek-dey-19aa47360_python-selenium-beautifulsoup-activity-7412924956855939075-oJwd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFna7EYBK-I4jdr0HBgJx-_wACOGoQCvNHo>)
