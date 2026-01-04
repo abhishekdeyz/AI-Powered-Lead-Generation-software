@@ -1,7 +1,7 @@
 # Unlimited Lead Finder 🚀
 
 An automation + agentic decision tool that generates **unlimited business leads** from public directories using a simple **query + page range**, then outputs a **clean, de-duplicated CSV** ready for outreach.
-
+and multi pages data scrabing agent turn into csv filez
 > Built to solve a real lead-gen workflow problem at **Pixel Global**: too many paid tools, manual cleanup, and duplicated/noisy leads.
 
 ---
